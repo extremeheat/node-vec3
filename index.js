@@ -47,6 +47,26 @@ class Vec3 {
     return new Vec3(this.x + dx, this.y + dy, this.z + dz)
   }
 
+  rshift (n) {
+    this.x >>= n
+    this.y >>= n
+    this.z >>= n
+  }
+
+  rshifted(n) {
+    return new Vec3(this.x >> n, this.y >> n, this.z >> n)
+  }
+
+  lshift (n) {
+    this.x <<= n
+    this.y <<= n
+    this.z <<= n
+  }
+
+  lshifted (n) {
+    return new Vec3(this.x << n, this.y << n, this.z << n)
+  }
+
   translate (dx, dy, dz) {
     this.x += dx
     this.y += dy
